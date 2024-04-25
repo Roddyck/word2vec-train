@@ -2,10 +2,8 @@ import torch
 import torch.nn as nn
 
 device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
-#device = "cpu"
 
-#WORDVEC_DIM_FOR_TEST = 10
-WORDVEC_DIM = 256
+WORDVEC_DIM = 250
 
 class Word2Vec(nn.Module):
     def __init__(self, num_tokens):
