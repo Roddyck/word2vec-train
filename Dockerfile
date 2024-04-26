@@ -1,9 +1,9 @@
-FROM nvidia/cuda:12.1.1-base-ubuntu22.04
+FROM pytorch/pytorch:2.2.2-cuda12.1-cudnn8-devel
 
 RUN apt-get update && apt-get install -y python3 python3-pip
 
 WORKDIR /app
 
-RUN python3 -m pip install torch torchvision torchaudio
-
 COPY . /app
+
+RUN python3 -m pip install -r requirements.txt
